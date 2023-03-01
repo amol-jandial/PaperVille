@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">PaperVille</string>
+    <string name="enter_email_to_continue">Enter Email To Continue</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="set_password">Set Password</string>
+    <string name="general_information">General Information</string>
+    <string name="preference_file_key">User Data</string>
+    <string-array name="branch_array">
+        <item>Select Branch</item>
+        <item>CSE</item>
+        <item>EC</item>
+        <item>IT</item>
+        <item>BIO</item>
+        <item>ME</item>
+    </string-array>
+    <string-array name="semester_array">
+        <item>Select Semester</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="test_array">
+        <item>test 1</item>
+        <item>test 2</item>
+        <item>test 3</item>
+        <item>test 4</item>
+    </string-array>
 </resources>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp">
+
+
+    <TextView
+        android:id="@+id/text_simple_registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Simple Registration"
+        android:textColor="@color/text_highlight"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_info_back"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:background="@drawable/icon_back"
+        app:layout_constraintBottom_toBottomOf="@+id/text_simple_registration"
+        app:layout_constraintEnd_toStartOf="@+id/text_simple_registration"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_simple_registration" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_info"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        app:boxStrokeColor="@color/highlight"
+        app:hintEnabled="false"
+        app:hintTextColor="@color/highlight"
+        app:startIconTint="@color/non_highlight"
+
+        app:layout_constraintEnd_toStartOf="@+id/button_info_next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_simple_registration"
+        app:startIconDrawable="@drawable/icon_phone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPhone_info"
+            android:layout_width="match_parent"
+            android:textColor="@color/text_highlight"
+
+            android:layout_height="match_parent"
+            android:inputType="phone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_info_username"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:boxStrokeColor="@color/highlight"
+        app:hintEnabled="false"
+        app:startIconTint="@color/non_highlight"
+
+        app:layout_constraintEnd_toStartOf="@+id/button_info_next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_info"
+        app:startIconDrawable="@drawable/icon_user">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edittext_username_info"
+            android:layout_width="match_parent"
+            android:textColor="@color/text_highlight"
+
+            android:layout_height="match_parent"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Spinner
+        android:id="@+id/spinner_branch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/text_highlight"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/spinner_drawable"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_semester"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_info_username" />
+
+    <Spinner
+        android:id="@+id/spinner_semester"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/text_highlight"
+        android:background="@drawable/spinner_drawable"
+        app:layout_constraintEnd_toEndOf="@+id/text_input_layout_info_username"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spinner_branch"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_info_username" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/text_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="0dp"
+        android:text="Section:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/spinner_branch"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_branch" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_semester"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        android:weightSum="2"
+        app:layout_constraintTop_toTopOf="@+id/textView4">
+
+        <RadioButton
+            android:id="@+id/radio_button_1"
+            style="@style/text_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/non_highlight"
+            android:text="1" />
+
+        <RadioButton
+            android:id="@+id/radio_button_2"
+            style="@style/text_normal"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/non_highlight"
+            android:text="2" />
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_info_next"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_next_pending"
+        app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

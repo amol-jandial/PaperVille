@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:id="@+id/root_view_registration"
+    tools:context=".MainActivity">
+
+
+    <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/frame_layout_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame_background"
+        />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_registration"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        >
+
+
+
+        <include layout="@layout/timeline"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_email_to_continue"
+            android:clickable="false"
+            android:textColor="@color/background"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:padding="26dp"
+            android:background="@drawable/button_registration"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

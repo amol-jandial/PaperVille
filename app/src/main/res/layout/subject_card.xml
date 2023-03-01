@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="16dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardElevation="2dp"
+        style="@style/custom_card_view_style"
+        >
+
+
+
+        <TextView
+            android:layout_gravity="center"
+            style="@style/text_current"
+            android:layout_marginStart="0dp"
+            android:layout_marginVertical="16dp"
+            android:text="Quantum Physics"
+            android:textSize="24sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_expand"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/expand_button"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            />
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_view_home"
+        android:id="@+id/card_view_expanded_home"
+        android:visibility="gone"
+        android:layout_marginTop="-10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_exam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Select Exam"
+                android:layout_marginStart="8dp"
+                android:layout_toRightOf="@id/button_bookmark"
+                android:layout_toLeftOf="@id/button_add"
+                android:layout_marginEnd="8dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/dropdown_select_exam"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_paper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Select Paper"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/text_input_layout_exam"
+                android:layout_marginStart="8dp"
+                android:layout_toRightOf="@id/button_bookmark"
+                android:layout_toLeftOf="@id/button_add"
+                android:layout_marginEnd="8dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/dropdown_select_paper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_normal"
+                android:text="View"
+                android:padding="8dp"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:layout_below="@id/text_input_layout_paper"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="8dp"
+                android:layout_toRightOf="@id/button_bookmark"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_normal"
+                android:text="Download"
+                android:padding="8dp"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:layout_below="@id/text_input_layout_paper"
+                android:layout_toLeftOf="@id/button_add"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_bookmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/icon_bookmark_unmark"
+                android:layout_alignParentTop="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_add"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/icon_add"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                />
+
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

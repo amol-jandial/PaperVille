@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:elevation="5dp"
+    android:padding="16dp"
+    style="@style/custom_card_view_style"
+    android:layout_height="wrap_content"
+    >
+
+
+
+        <TextView
+            android:id="@+id/textView12"
+            style="@style/text_current"
+            android:text="Upload Paper"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_select_exam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+            <RadioButton
+                android:id="@+id/radio_minor"
+                style="@style/text_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/highlight"
+                android:text="Minor" />
+
+            <RadioButton
+                android:id="@+id/radio_major1"
+                style="@style/text_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/highlight"
+                android:text="Major 1" />
+
+            <RadioButton
+                android:id="@+id/radio_major2"
+                style="@style/text_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/highlight"
+                android:text="Major 2" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_preview_images"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:layout_marginStart="5dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/dotted_background"
+            app:layout_constraintEnd_toEndOf="@+id/radio_group_select_exam"
+            app:layout_constraintStart_toStartOf="@+id/radio_group_select_exam"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_select_exam">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_add_images"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="visible"
+                android:background="@drawable/icon_add"
+                />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_cancel"
+            android:text="Cancel"
+            app:layout_constraintStart_toStartOf="@+id/radio_group_select_exam"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_preview_images"
+            style="@style/normal_button_style" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_upload_images"
+            style="@style/normal_button_style"
+            android:text="Upload"
+            app:layout_constraintEnd_toEndOf="@+id/linear_layout_preview_images"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_preview_images" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
